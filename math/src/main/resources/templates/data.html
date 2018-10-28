@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1px;
+    text-align: left;
+}
+
+
+    </style>
+
+</head>
+<body>
+<div class="newspaper">
+    <table style="width:100%">
+        <tr th:each="operation : ${operations}">
+            <td height="35" th:text="${operation.col1}"></td>
+            <td height="35" th:text="${operation.col2}"></td>
+            <td height="35" th:text="${operation.col3}"></td>
+            <td height="35" th:text="${operation.col4}"></td>
+            <td height="35" th:text="${operation.col5}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
